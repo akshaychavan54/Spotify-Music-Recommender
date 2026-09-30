@@ -1,19 +1,30 @@
-# 🎵 Spotify Music Recommender System
+# 🎵 Spotify Music Recommended System
 
-A Streamlit-based music recommendation system that uses Machine Learning (KNN) and Content Filtering to suggest songs based on audio features.
+A Streamlit-based music recommendation app built using Unsupervised Machine Learning. The system clusters tracks using K-Means and PCA based on audio features to deliver personalized song recommendations.
+
+---
 
 ## 🚀 Features
-- Recommends similar songs based on user selection.
-- Machine Learning fallback logic using pre-trained KNN model (`Spotify.pkl`).
-- Interactive web UI built with Streamlit.
+- Data Scaling: Uses StandardScaler to normalize audio features (danceability, energy, tempo, loudness, valence, etc.).
+- Optimal Clustering: K-Means clustering algorithm (K=7) optimized via the Elbow Method.
+- Dimensionality Reduction: Implements Principal Component Analysis (PCA) for cluster visualization.
+- Interactive UI: Dynamic web application built with Streamlit.
+
+---
 
 ## 🛠️ Tech Stack
-- Python
-- Streamlit
-- Pandas
-- Scikit-Learn
+- Language: Python
+- Machine Learning: Scikit-Learn (KMeans, StandardScaler, PCA)
+- Data Manipulation: Pandas, NumPy
+- Data Visualization: Matplotlib, Seaborn
+- Web Framework: Streamlit
 
-## 🏃 How to Run Locally
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
+---
+
+## 📁 Repository Structure
+```text
+├── app.py                     # Main Streamlit web application
+├── Spotify_recommended.csv    # Processed audio feature dataset
+├── Spotify.pkl                # Pre-trained K-Means & PCA model
+├── requirements.txt           # Project dependencies
+└── README.md                  # Project documentation
